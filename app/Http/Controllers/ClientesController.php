@@ -73,7 +73,7 @@ class ClientesController extends Controller
         }
         $cliente->update($request->all());
         $mensaje = $cambios ? 'Actualización: ' . implode(', ', $cambios) : 'No hubo cambios.';
-        return redirect()->route('clientes.index')->with('success', $mensaje);
+        return redirect()->route('clientes.index')->with('success', 'Cliente actualizado correctamente');
     }
 
     // Eliminar cliente

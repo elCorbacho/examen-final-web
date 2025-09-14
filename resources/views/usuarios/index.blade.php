@@ -16,13 +16,21 @@
                     </form>
                 </div>
                 @if(session('success'))
-                    <!-- Modal Vuexy de éxito al crear usuario -->
-                    <div class="modal fade" id="creacionExitoModal" tabindex="-1" aria-labelledby="creacionExitoLabel" aria-hidden="true">
+                    <div class="modal fade" id="usuarioExitoModal" tabindex="-1" aria-labelledby="usuarioExitoLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content border-0 shadow">
                           <div class="modal-header bg-success text-white rounded-top">
-                            <h5 class="modal-title" id="creacionExitoLabel">
-                              <i class="ti ti-check-circle me-2"></i>Usuario creado
+                            <h5 class="modal-title" id="usuarioExitoLabel">
+                              <i class="ti ti-check-circle me-2"></i>
+                              @if(session('success') == 'Usuario creado correctamente.')
+                                Usuario creado
+                              @elseif(session('success') == 'Usuario actualizado correctamente.')
+                                Usuario actualizado
+                              @elseif(session('success') == 'Usuario eliminado correctamente.')
+                                Usuario eliminado
+                              @else
+                                Éxito
+                              @endif
                             </h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                           </div>
@@ -38,7 +46,7 @@
                     </div>
                     <script>
                       document.addEventListener('DOMContentLoaded', function() {
-                        var modal = new bootstrap.Modal(document.getElementById('creacionExitoModal'));
+                        var modal = new bootstrap.Modal(document.getElementById('usuarioExitoModal'));
                         modal.show();
                       });
                     </script>
