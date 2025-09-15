@@ -25,10 +25,6 @@ VentasFix es una aplicación web desarrollada en Laravel orientada a la administ
 - Base de datos SQLite, MySQL o PostgreSQL
 
 ## Instalación
-1. Clonar el repositorio:
-	```bash
-	git clone https://github.com/elCorbacho/examen-final-C-F.git
-	cd examen-final-C-F
 	```
 2. Instalar dependencias backend:
 	```bash
