@@ -26,11 +26,11 @@ VentasFix es una aplicación web desarrollada en Laravel orientada a la administ
 
 ## Instalación
 	```
-2. Instalar dependencias backend:
+1. Instalar dependencias backend:
 	```bash
 	composer install
 	```
-3. Instalar dependencias frontend:
+2. Instalar dependencias frontend (si corresponde):
 	```bash
 	npm install && npm run build
 	```
