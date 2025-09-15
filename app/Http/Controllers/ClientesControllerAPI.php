@@ -99,7 +99,7 @@ class ClientesControllerAPI extends Controller
 
         try {
             $validated = $request->validate([
-                'rut_empresa' => 'sometimes|required|string|unique:clientes,rut_empresa,' . $id,
+                'rut_empresa' => 'sometimes|required|string|unique:cliente,rut_empresa,' . $id,
                 'rubro' => 'sometimes|required|string|max:255',
                 'razon_social' => 'sometimes|required|string|max:255',
                 'telefono' => 'nullable|string|max:20',
